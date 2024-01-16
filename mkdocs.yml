@@ -6,7 +6,7 @@ theme:
     - navigation.tabs
     - content.code.annotate
   icon:
-    annotation: material/arrow-right-circle
+    annotation: material/plus-circle-outline
 
 markdown_extensions:
   - attr_list
