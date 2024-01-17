@@ -76,8 +76,9 @@ func main() {
 	// some code here, to print out trace_pipe ... 
 }
 ```
+eBPF programs need to be attached to an event. For this example we chose to attach to the system call *exeve*, which is the syscall used to execute a program. Whenever anything or anyone starts aa new program executing on a this machine, that will call *execve(), which will trigger the eBPF program. 
 
-`bpf_trace_printk()` helper function in the kernel alway sends output to the same predefind location: */sys/kernel/debug/tracing/trace_pipe*. By using the `cat` command  you can confirm the content, for example:
+`bpf_trace_printk()` helper function in the kernel always sends output to the same predefind location: */sys/kernel/debug/tracing/trace_pipe*. By using the `cat` command  you can confirm the content, for example:
 ```bash
  <...>-371439  [000] ...21 128224.956635: bpf_trace_printk: Hack the planet!, my pid is 371439
  <...>-371440  [005] ...21 128226.063314: bpf_trace_printk: Hack the planet!, my pid is 371440

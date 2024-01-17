@@ -5,6 +5,7 @@ theme:
     - navigation.top
     - navigation.tabs
     - content.code.annotate
+    - content.tabs.link
   icon:
     annotation: material/plus-circle-outline
 
@@ -18,3 +19,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
